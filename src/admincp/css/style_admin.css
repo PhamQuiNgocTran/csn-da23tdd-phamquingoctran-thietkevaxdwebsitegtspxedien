@@ -1,0 +1,164 @@
+/* 1. CẤU TRÚC CƠ BẢN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9; /* Màu nền xám nhạt dịu mắt */
+    color: #333;
+}
+
+/* Khung bao quanh toàn bộ admin */
+.wrapper {
+    display: flex; /* Chia cột: Trái menu, Phải nội dung */
+    min-height: 100vh;
+}
+
+/* 2. MENU BÊN TRÁI (SIDEBAR) */
+.sidebar {
+    width: 250px;
+    background-color: #343a40; /* Màu đen xám chuyên nghiệp */
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 20px;
+    position: fixed; /* Cố định khi cuộn */
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffc107; /* Màu vàng điểm nhấn */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid #4b545c;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #c2c7d0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #007bff; /* Màu xanh khi di chuột */
+    color: #fff;
+    padding-left: 25px; /* Hiệu ứng đẩy chữ sang phải */
+}
+
+/* 3. NỘI DUNG BÊN PHẢI (MAIN CONTENT) */
+.main-content {
+    margin-left: 250px; /* Đẩy sang phải bằng độ rộng menu */
+    width: calc(100% - 250px);
+    padding: 30px;
+}
+
+.header-admin {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 4. TRANG TRÍ BẢNG (TABLE) - Quan trọng nhất */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #007bff; /* Tiêu đề bảng màu xanh */
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* Đổi màu khi di chuột vào dòng */
+}
+
+/* 5. CÁC NÚT BẤM (BUTTONS) */
+/* Nút chung */
+a {
+    text-decoration: none;
+}
+
+/* Nút Sửa / Xem chi tiết */
+table td a {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Link Xem/Sửa */
+a[href*="query=sua"], a[href*="query=xemdonhang"] {
+    color: #007bff; /* Xanh dương */
+}
+
+/* Link Xóa */
+a[href*="query=xoa"] {
+    color: #dc3545; /* Đỏ */
+}
+
+/* Nút xử lý đơn hàng */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 6. FORM NHẬP LIỆU */
+input[type="text"], input[type="file"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
